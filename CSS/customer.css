@@ -257,6 +257,7 @@ p,a{
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
+	height: 200px;
 }
 
 .card .card-info h3{
