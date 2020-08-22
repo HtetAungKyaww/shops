@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Home | All Shops In One Place</title>
+	<link rel="stylesheet" type="text/css" href="CSS/index.css">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cardo" />
+</head>
+<body>
+	<header id="header">
+			<a href="#" class="logo">Logo</a>
+			<ul>
+				<li>
+					<a href="#home">Home</a>
+				</li>
+				<li>
+					<a href="customer.html">Customer</a>
+				</li>	
+				<li>
+					<a href="#home">Merchant</a>
+				</li>				
+			</ul>
+	</header>
+
+	<section id="banner" class="banner">
+		<div class="banner_information">
+			<h1>All Shops <span>In One Place</span></h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				<a href="#" class="banner_btn">Learn More</a>			
+		</div>
+	</section>
+
+	<article id="dec-video" class="dec-video">
+		<video src="images/video.mp4" muted autoplay loop type="mp4"></video>
+		<div class="text-box">
+			<h1>Lorem</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+		</div>
+		<div class="videoBox">
+			<video src="images/video.mp4" muted autoplay loop type="mp4"></video>
+		</div>
+	</article>
+	
+	<script type="text/javascript">
+		window.addEventListener("scroll",function(){
+			var header=document.querySelector("header");
+			header.classList.toggle("sticky",window.scrollY >0 );
+		})
+
+	</script>
+</body>
+</html>

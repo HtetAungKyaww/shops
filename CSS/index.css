@@ -1,0 +1,266 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	min-height: 600px;
+}
+h1{
+	font-family:'Cardo', sans-serif;
+}
+
+p,a{
+	font-family: 'Montserrat', sans-serif;
+}
+/* Strart header*/
+header{
+	padding: 40px 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	z-index: 1000;
+	transition: .6s;
+}
+
+header.sticky{
+	padding: 5px 100px;
+	background: #fff;
+	border-bottom: 1px solid (0,0,0,.1);
+}
+
+header.sticky .logo,
+header.sticky ul li a{
+	color: #000;
+}
+
+header .logo{
+	color: #fff;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
+	position: relative;
+	transition: .6s;
+}
+
+header ul{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header ul li{
+	position: relative;
+	list-style-type: none;
+}
+
+header ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 300;
+	margin: 0 15px;
+	font-size: 1.3em;
+	letter-spacing: 2px;
+	transition: .6s; 
+}
+/* End Header */
+
+/* Start section banner*/
+.banner{
+	background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../images/banner_bg2.jpg');
+	width: 100%;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	height: 700px;
+}
+
+.banner::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	z-index: 1;
+	background: linear-gradient(to top,#000,transparent);
+}
+
+.banner_information{
+	margin: auto;
+	max-width: 80%;
+	background-color: rgba(0,0,0,.3);
+	padding: 40px;
+	border-radius: 10px;
+	z-index: 5;
+}
+
+.banner_information h1{
+	font-size: 3.3em;
+	color: #fff;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.banner_information p{
+	color: #fff;
+	opacity: .9;
+	font-size: 1.2em;
+	letter-spacing: 1.3px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.banner .banner_btn{
+	position: relative;
+	display: inline-block;
+	padding: 10px 30px;
+	background: #fff;
+	color: #333;
+	text-decoration: none;
+	text-align: center;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%,-50%);
+	margin-top: 40px;
+}
+
+.banner_information h1 span{
+	background-image: linear-gradient(to right, rgb(12, 240, 23),rgb(45, 7, 214),#fff, #f0f,#ff7,#f00,#ff0,#fff, rgb(31, 195, 224),#ff7,#ff0,#fff, #000,#ff7,#f00,#ff0,#fff, #f0f,#ff7);
+	-webkit-background-clip: text;
+	animation: animate 20s linear infinite;
+	background-size: 1000%;
+	color: transparent;
+}
+
+@keyframes animate
+{
+	0%{
+		background-position: 0% 100%;
+	}
+
+	25%{
+		background-position: 100% 50%;
+	}
+
+	50%{
+		background-position: 50% 50%;
+	}
+
+	75%{
+		background-position: 100% 100%;
+	}
+
+	100%{
+		background-position: 0% 100%;
+	}
+}
+@media(max-width:991px){
+	.banner_information{
+		padding: 10px;
+	}
+
+	.banner_information h1{
+		font-size: 2.2em;
+	}
+
+	.banner_information p{
+		font-size: 1em;
+	}
+}
+/* End section banner*/
+
+/*start description video*/
+.dec-video{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 600px;
+	padding: 0 100px;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: black;
+}
+
+.dec-video::before{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 400px;
+	height: 100%;
+	background: rgba(255, 255, 255, .5);
+}
+
+.dec-video video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: .2;
+	pointer-events: none;
+}
+
+.dec-video .text-box{
+	position: relative;
+	max-width: 550px;
+}
+
+.dec-video .text-box h1{
+	color: #fff;
+	font-size: 3.2em;
+}
+
+.dec-video .text-box p{
+	color: #fff;
+	font-size: 1.1em;
+	margin: 5px 0 25px;
+}
+
+.dec-video .videoBox{
+	position: relative;
+	margin-left: 10px;
+	width: 100%;
+	height: 400px;
+	background: #fff;
+	z-index: 1;
+}
+
+.dec-video .videoBox video{
+	opacity: 1;
+}
+
+@media(max-width:991px){
+	.dec-video{
+		padding: 100px 50px 0;
+		flex-direction: column;
+	}
+
+	.dec-video::before{
+		display: none;
+	}
+
+	.dec-video .text-box{
+		max-width: 100%;
+	}
+
+	.dec-video .text-box h1{
+		font-size: 2.2em;
+	}
+
+	.dec-video .videoBox video{
+		width: 100%;
+	}
+}
+/*End description video*/
