@@ -183,10 +183,11 @@ p,a{
 
 /* start search box */
 .searchBox{
-	position: fixed;
+	position: sticky;
+	top: 0;
 	background: #000;
 	box-sizing: border-box;
-    width: 80%;
+    width: 100%;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -224,10 +225,6 @@ p,a{
 
 /*start responsive */
 @media only screen and (max-width: 992px) {
-	.searchBox{
-		width: 95%;
-		box-sizing: border-box;
-	}
 
 	.searchbtn{
 		width: 15%;
@@ -246,11 +243,10 @@ p,a{
 .card{
 	margin: 10px;
 	width: 200px;
-	height: auto;
+	height: 400px;
 	background-color: rgba(0,0,0,0.8);
 	border-radius: 10px;
-	margin-top: 80px;
-	flex-grow: 3;
+	flex-grow: 10;
 	box-sizing: border-box;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
 	cursor: pointer;
