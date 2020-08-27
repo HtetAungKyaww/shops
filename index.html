@@ -17,12 +17,10 @@
 					<a href="#home">Home</a>
 				</li>
 				<li>
-					<a href="customer.html">Customer</a>
-				</li>	
-				<li>
-					<a href="#home">Merchant</a>
-				</li>				
+					<a href="shops.html">Customer</a>
+				</li>			
 			</ul>
+			<div class="toggle" onclick="toggle()"></div>
 	</header>
 
 	<section id="banner" class="banner">
@@ -49,6 +47,11 @@
 			var header=document.querySelector("header");
 			header.classList.toggle("sticky",window.scrollY >0 );
 		})
+
+		function toggle(){
+			var header=document.querySelector("header");
+			header.classList.toggle("active");
+		}
 
 	</script>
 </body>
